@@ -3,7 +3,8 @@ import path from 'path';
 import { InicioComponent } from './componentes/inicio/inicio.component';
 import { RegistroComponent } from './componentes/registro/registro.component';
 import { InicioSesionComponent } from './componentes/inicio-sesion/inicio-sesion.component';
-import { BrawlersComponent } from './componentes/brawlers/brawlers.component';
+import { PersonajesAOTComponent } from './componentes/personajes-aot/personajes-aot.component';
+
 
 export const routes: Routes = [{
     path: "",
@@ -16,11 +17,11 @@ export const routes: Routes = [{
     path:"registro",
     component:RegistroComponent
 },{
-    path:"inicio sesion",
+    path:"iniciosesion",
     component:InicioSesionComponent
 },{
-    path:"brawler",
-    component:BrawlersComponent
+    path:"personajes",
+    component:PersonajesAOTComponent
 }
 
 

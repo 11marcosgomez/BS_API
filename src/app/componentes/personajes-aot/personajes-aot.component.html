@@ -1,0 +1,36 @@
+@if (personajes) {
+    <div class="row my-3 justify-content-center">
+        <button class="btn btn-info col-1 mx-3" (click)="cambiarPag('first')">Primeros</button>
+        <button class="btn btn-info col-1 mx-3" (click)="cambiarPag('prev')">Anteriores</button>
+        <button class="btn btn-info col-1 mx-3" (click)="cambiarPag('next')">Siguientes</button>
+        <button class="btn btn-info col-1 mx-3" (click)="cambiarPag('last')">Ultimos</button>
+    </div>
+    
+    
+    <div class="row my-3">
+        @for (result of personajes.results; track result.id) {
+            <div class="col-3 my-3">
+                <a href="/personajes/{{result.id}}"></a>
+                <div class="card">
+                    <div class="card-header bg-primary">
+                        <h5><strong>{{result.id}}. </strong>{{result.name}}</h5>
+                    </div>
+                    <img class="card-img-top" src="{{result.img}}" alt="">
+                    <div class="card-body">
+                        <p><strong>Edad: </strong> {{result.age}}</p>
+                        <p><strong>Altura: </strong>{{result.height}}</p>
+                        <p><strong>Estado: </strong>{{result.status}}</p>
+                    </div>
+                </div>
+            </div>
+        }
+        
+    </div>
+    
+    <div class="row my-3 justify-content-center">
+        <button class="btn btn-info col-1 mx-3" (click)="cambiarPag('first')">Primeros</button>
+        <button class="btn btn-info col-1 mx-3" (click)="cambiarPag('prev')">Anterior</button>
+        <button class="btn btn-info col-1 mx-3" (click)="cambiarPag('next')">Siguiente</button>
+        <button class="btn btn-info col-1 mx-3" (click)="cambiarPag('last')">Ultimos</button>
+    </div>
+}
